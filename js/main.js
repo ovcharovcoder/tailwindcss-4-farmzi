@@ -83,7 +83,7 @@ let swiperForProjects = new Swiper('.mySwiper-projects', {
   },
 });
 
-// Вмикаємо / вимикаємо autoplay залежно від ширини
+// Enable/disable autoplay depending on width
 function handleAutoplay() {
   if (window.innerWidth <= 768) {
     swiperForProjects.autoplay.start();
@@ -92,8 +92,8 @@ function handleAutoplay() {
   }
 }
 
-handleAutoplay(); // викликаємо при завантаженні
-window.addEventListener('resize', handleAutoplay); // викликаємо при зміні розміру
+handleAutoplay(); // called when loading
+window.addEventListener('resize', handleAutoplay); // called when resizing
 
 // Swiper slider Testimonials
 const swiperForTestimonials = new Swiper('.mySwiper-testimonials', {
@@ -107,7 +107,7 @@ const swiperForTestimonials = new Swiper('.mySwiper-testimonials', {
   },
   loop: true,
 
-  // Додаємо breakpoints
+  // Added breakpoints
   breakpoints: {
     0: {
       slidesPerView: 1,
