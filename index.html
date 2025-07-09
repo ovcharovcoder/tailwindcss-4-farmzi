@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Add fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Add styles -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body class="font-roboto">
+    <header class="bg-dark-green relative z-50 py-5 border-b border-white">
+      <div class="container-wide">
+        <div class="flex justify-between items-center">
+          <a href="#"><img src="images/icons/logo.svg" alt="logo" /></a>
+
+          <!-- Burger Button -->
+          <button id="burger" class="md:hidden text-white z-50 relative">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 22 22"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Universal Menu -->
+          <nav
+            id="mainMenu"
+            class="fixed md:static mt-[90px] md:mt-0 top-0 md:top-auto left-0 md:left-auto h-full md:h-auto w-64 md:w-auto transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out bg-dark-green md:bg-transparent flex flex-col md:flex-row items-start md:items-center gap-y-6 md:gap-x-7 p-6 md:p-0 text-white z-40"
+          >
+            <ul class="flex flex-col md:flex-row gap-y-6 md:gap-x-7">
+              <li class="relative group">
+                <a href="#" class="relative z-10">Home</a>
+                <span
+                  class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"
+                ></span>
+              </li>
+              <li class="relative group">
+                <a href="#about" class="relative z-10">About</a>
+                <span
+                  class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"
+                ></span>
+              </li>
+              <li class="relative group">
+                <a href="#services" class="relative z-10">Services</a>
+                <span
+                  class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"
+                ></span>
+              </li>
+              <li class="relative group">
+                <a href="#blog" class="relative z-10">Blog</a>
+                <span
+                  class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"
+                ></span>
+              </li>
+              <li class="relative group">
+                <a href="#contact" class="relative z-10">Contact</a>
+                <span
+                  class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"
+                ></span>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Contact block (optional, only desktop) -->
+          <div class="hidden md:flex">
+            <img src="images/icons/phone-icon.svg" alt="phone" />
+            <div class="text-white pl-4">
+              <span>Call us:</span>
+              <p>+00 89 458 648</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Promo -->
+    <section class="bg-dark-green relative min-h-[790px] overflow-visible">
+      <div
+        class="relative md:absolute top-[60px] left-0 w-full border border-dashed border-gray-400 z-10 translate-y-0 md:translate-y-0"
+      >
+        <div class="container relative pb-[60px]">
+          <div
+            class="flex flex-col md:flex-row items-start justify-between gap-8"
+          >
+            <div class="text-white max-w-[455px] space-y-4 pt-0 md:pt-11">
+              <div class="flex items-center gap-2">
+                <span
+                  class="inline-block w-[40px] h-px bg-medium-light-green"
+                ></span>
+                <span class="text-lg medium-light-green"
+                  >Make a garden with musion.</span
+                >
+              </div>
+              <h1 class="text-4xl md:text-6xl leading-tight font-playfair mt-4">
+                If you have a garden and a library, you have everything you
+                need.
+              </h1>
+              <div class="flex items-center gap-2 mt-4">
+                <span
+                  class="inline-block w-[40px] h-px bg-medium-light-green"
+                ></span>
+                <span class="text-lg medium-light-green"
+                  >Marcus Tullius Cicero</span
+                >
+              </div>
+              <div class="text-center md:text-start">
+                <a
+                  class="inline-block bg-white dark-green px-10 py-2 mt-14"
+                  href="#"
+                  >More Service +</a
+                >
+              </div>
+            </div>
+            <div>
+              <img
+                src="images/promo-img.webp"
+                alt="img"
+                class="max-w-full h-auto lazyload"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About company -->
+    <section id="about" class="mt-24 md:mt-44 pb-8 md:pb-24">
+      <div class="container">
+        <div>
+          <div
+            class="flex items-center justify-center md:justify-start gap-2 mt-4"
+          >
+            <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+            <span class="text-lg text-gray-500">About Company</span>
+          </div>
+          <h2
+            class="font-playfair text-3xl md:text-5xl dark-green md:pr-16 mt-2.5 leading-tight text-center md:text-start"
+          >
+            Farmzi have 35 years of experience and know smart way to grow and
+            design your beautiful garden.
+          </h2>
+        </div>
+
+        <!-- Content -->
+        <div
+          class="flex justify-between mt-8 md:mt-16 items-center flex-col md:flex-row"
+        >
+          <div>
+            <img
+              class="max-w-full h-auto lazyload"
+              src="images/about-img.webp"
+              alt="img"
+              loading="lazy"
+            />
+          </div>
+          <div class="max-w-md">
+            <h3 class="font-playfair text-2xl dark-green mt-8 md:mt-0">
+              Who we are?
+            </h3>
+            <p class="pt-6 text-gray-500">
+              Lorem Ipsum is simply dummy text of the printing and typeset
+              industry. Lorem Ipsum has been the industry's standard dumm ever
+              since the 1500s, when an unknown printer took a galley scrambled
+              it make a type specimen book.
+            </p>
+            <blockquote class="font-playfair text-xl dark-green pt-4">
+              “Lorem Ipsum is simply dummy text of the printn industry lorem
+              epsum has been the industry and scrambled it make a type specimen
+              book”.
+            </blockquote>
+            <h3 class="font-playfair text-2xl dark-green pt-9">
+              Mission and vision
+            </h3>
+            <p class="pt-6 text-gray-500">
+              Lorem Ipsum is simply dummy text of the printing and typeset
+              industry. Lorem Ipsum has been the industry's standard dumm ever
+              since the 1500s, when an unknown printer took a galley scrambled
+              it make a type specimen book.
+            </p>
+            <p class="pt-3.5 text-gray-500">
+              Lorem Ipsum is simply dummy text of the printing and typeset
+              industry. Lorem Ipsum has been the industry's standard dumm
+              scrambled it make a type specimen book.
+            </p>
+            <div class="text-center md:text-start">
+              <a
+                class="inline-block dark-green border-2 px-10 py-2 mt-14"
+                href="#"
+                >Learn More +</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Services -->
+    <section id="services" class="bg-light-green py-8 md:py-20">
+      <div class="container">
+        <div class="flex justify-center md:justify-start items-center gap-2">
+          <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+          <span class="text-lg text-gray-500">Our Services</span>
+        </div>
+        <h2
+          class="font-playfair text-3xl md:text-5xl dark-green md:pr-16 mt-2.5 leading-tight text-center md:text-start"
+        >
+          Farmzi always provide amazing gardening and landscaping services.
+        </h2>
+        <div
+          class="flex flex-col md:flex-row items-center justify-between mt-12"
+        >
+          <!-- Item 1 -->
+          <a
+            class="block p-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+            href="#"
+          >
+            <img
+              class="max-w-full h-auto lazyload"
+              src="images/sevices-img-1.webp"
+              alt="img"
+              loading="lazy"
+            />
+            <div
+              class="flex items-center gap-2 mt-4 justify-center md:justify-start"
+            >
+              <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+              <span class="text-gray-500">Flower</span>
+            </div>
+            <h4
+              class="font-playfair dark-green text-xl text-center md:text-start"
+            >
+              Planting Flower
+            </h4>
+          </a>
+          <!-- Item 2 -->
+          <a
+            class="block p-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+            href="#"
+          >
+            <img
+              class="max-w-full h-auto lazyload"
+              src="images/sevices-img-2.webp"
+              alt="img"
+              loading="lazy"
+            />
+            <div
+              class="flex items-center gap-2 mt-4 justify-center md:justify-start"
+            >
+              <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+              <span class="text-gray-500">Planting</span>
+            </div>
+            <h4
+              class="font-playfair dark-green text-xl text-center md:text-start"
+            >
+              Tree Planting
+            </h4>
+          </a>
+          <!-- Item 3 -->
+          <a
+            class="block p-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+            href="#"
+          >
+            <img
+              class="max-w-full h-auto lazyload"
+              src="images/sevices-img-3.webp"
+              alt="img"
+              loading="lazy"
+            />
+            <div
+              class="flex items-center gap-2 mt-4 justify-center md:justify-start"
+            >
+              <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+              <span class="text-gray-500">Rush</span>
+            </div>
+            <h4
+              class="font-playfair dark-green text-xl text-center md:text-start"
+            >
+              Rush Removal
+            </h4>
+          </a>
+          <!-- Item 4 -->
+          <a
+            class="block p-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+            href="#"
+          >
+            <img
+              class="max-w-full h-auto lazyload"
+              src="images/sevices-img-4.webp"
+              alt="img"
+              loading="lazy"
+            />
+            <div
+              class="flex items-center gap-2 mt-4 justify-center md:justify-start"
+            >
+              <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+              <span class="text-gray-500">Watering</span>
+            </div>
+            <h4
+              class="font-playfair dark-green text-xl text-center md:text-start"
+            >
+              Garden Watering
+            </h4>
+          </a>
+        </div>
+        <div class="text-center">
+          <a class="inline-block dark-green border-2 px-10 py-2 mt-14" href="#"
+            >Learn More +</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-dark-green py-8 md:py-20">
+      <div class="container">
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-8"
+        >
+          <div class="max-w-[640px] text-center md:text-left">
+            <div
+              class="flex items-center gap-2 mt-4 justify-center md:justify-start"
+            >
+              <span
+                class="inline-block w-[40px] h-px bg-medium-light-green"
+              ></span>
+              <span class="text-lg medium-light-green">About Company</span>
+            </div>
+            <h2
+              class="font-playfair text-3xl md:text-5xl text-white mt-2.5 leading-tight"
+            >
+              If you need any gardening service, you can contact with Farmzi.
+            </h2>
+          </div>
+
+          <!-- Contact block -->
+          <div
+            class="flex w-full md:max-w-[463px] pt-5 pb-5 bg-green justify-center items-center"
+          >
+            <img
+              class="max-w-full h-auto lazyload"
+              src="images/icons/phone-icon.svg"
+              alt="phone"
+              loading="lazy"
+            />
+            <div class="pl-4">
+              <span class="medium-light-green">Our Services</span>
+              <p class="text-white">+00 89 458 648</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Members -->
+    <section class="py-8 md:py-20 relative">
+      <div class="container">
+        <div class="w-full md:max-w-[634px] ml-auto">
+          <div
+            class="flex items-center gap-2 mt-4 justify-center md:justify-start"
+          >
+            <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+            <span class="text-lg text-gray-500">Team Members</span>
+          </div>
+          <h2
+            class="font-playfair text-3xl md:text-5xl dark-green mt-2.5 leading-tight text-center md:text-start"
+          >
+            If you need any gardening service, you can contact with Farmzi.
+          </h2>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center justify-between mt-12"
+        >
+          <!-- Item 1 -->
+          <div
+            class="block w-full md:max-w-[346px] p-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+            href="#"
+          >
+            <img
+              class="m-auto md:m-0 max-w-full h-auto lazyload"
+              src="images/team-img-1.webp"
+              alt="img"
+              loading="lazy"
+            />
+            <div
+              class="flex items-center gap-2 mt-4 justify-center md:justify-start"
+            >
+              <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+              <span class="text-gray-500">Founder of Farmzi</span>
+            </div>
+            <h4
+              class="font-playfair dark-green text-xl pt-2.5 text-center md:text-start"
+            >
+              Shoshana Horsley
+            </h4>
+            <p class="text-gray-500 pt-5 text-center md:text-start">
+              Lorem Ipsum is simply dummy text of the printing and industry has
+              been the indust.
+            </p>
+          </div>
+          <!-- Item 2 -->
+          <div
+            class="block w-full md:max-w-[346px] p-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+            href="#"
+          >
+            <img
+              class="m-auto md:m-0 max-w-full h-auto lazyload"
+              class="m-auto md:m-0"
+              src="images/team-img-2.webp"
+              alt="img"
+              loading="lazy"
+            />
+            <div
+              class="flex items-center gap-2 mt-4 justify-center md:justify-start"
+            >
+              <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+              <span class="text-gray-500">Senior Gardener</span>
+            </div>
+            <h4
+              class="font-playfair dark-green text-xl pt-2.5 text-center md:text-start"
+            >
+              Kristofer Pennell
+            </h4>
+            <p class="text-gray-500 pt-5 text-center md:text-start">
+              Lorem Ipsum is simply dummy text of the printing and industry has
+              been the indust.
+            </p>
+          </div>
+          <!-- Item 3 -->
+          <div
+            class="block w-full md:max-w-[346px] p-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+            href="#"
+          >
+            <img
+              class="m-auto md:m-0 max-w-full h-auto lazyload"
+              src="images/team-img-3.webp"
+              alt="img"
+              loading="lazy"
+            />
+            <div
+              class="flex items-center gap-2 mt-4 justify-center md:justify-start"
+            >
+              <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+              <span class="text-gray-500">Garden Designer</span>
+            </div>
+            <h4
+              class="font-playfair dark-green text-xl pt-2.5 text-center md:text-start"
+            >
+              Matthew Jackson
+            </h4>
+            <p class="text-gray-500 pt-5 text-center md:text-start">
+              Lorem Ipsum is simply dummy text of the printing and industry has
+              been the indust.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="hidden md:block absolute bg-light-green top-0 left-0 w-[690px] h-[865px] -z-1"
+      ></div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-dark-green mb-8 md:mb-20">
+      <div class="container">
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-8"
+        >
+          <div class="max-w-[640px] text-center md:text-left">
+            <div
+              class="flex items-center gap-2 mt-4 justify-center md:justify-start"
+            >
+              <span
+                class="inline-block w-[40px] h-px bg-medium-light-green"
+              ></span>
+              <span class="text-lg medium-light-green"
+                >Company intro video</span
+              >
+            </div>
+            <h2
+              class="font-playfair text-3xl md:text-5xl text-white mt-2.5 leading-tight"
+            >
+              See our intro video and lets start your dream project.
+            </h2>
+          </div>
+
+          <!-- Contact block -->
+          <div class="w-full md:max-w-[463px]">
+            <img
+              class="max-w-full h-auto lazyload"
+              src="images/cta-img.webp"
+              alt="img"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our achievements -->
+    <section class="mb-8 md:mb-20">
+      <div class="container">
+        <div class="flex flex-col md:flex-row items-center bg-light-green px-4">
+          <!-- Item 1 -->
+          <div class="py-8 md:py-16 text-center w-[152px] flex-grow">
+            <p class="text-5xl dark-green">847 +</p>
+            <div class="flex items-center gap-2 mt-4 justify-center">
+              <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+              <span class="text-gray-500">Project Done</span>
+            </div>
+          </div>
+
+          <!-- Item 2  -->
+          <div
+            class="py-8 md:py-16 text-center achievements-item w-[152px] flex-grow"
+          >
+            <p class="text-5xl dark-green">753 +</p>
+            <div class="flex items-center gap-2 mt-4 justify-center">
+              <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+              <span class="text-gray-500">Happy Client</span>
+            </div>
+          </div>
+
+          <!-- Item 3  -->
+          <div
+            class="py-8 md:py-16 text-center achievements-item w-[152px] flex-grow"
+          >
+            <p class="text-5xl dark-green">284 +</p>
+            <div class="flex items-center gap-2 mt-4 justify-center">
+              <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+              <span class="text-gray-500">Team Member</span>
+            </div>
+          </div>
+
+          <!-- Item 4  -->
+          <div
+            class="py-8 md:py-18 text-center achievements-item w-[152px] flex-grow"
+          >
+            <p class="text-5xl dark-green">98 +</p>
+            <div class="flex items-center gap-2 mt-4 justify-center">
+              <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+              <span class="text-gray-500">Winning Award</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="pb-[100px]">
+      <div class="container">
+        <!-- Swiper -->
+        <div class="swiper mySwiper-projects relative z-auto">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide relative flex flex-col md:block">
+              <img
+                src="images/project-img-1.webp"
+                alt="img"
+                class="w-full object-cover h-auto lazyload"
+                loading="lazy"
+              />
+              <div
+                class="bg-dark-green md:absolute md:w-[266px] md:h-[333px] z-10 md:left-0 md:bottom-0 flex flex-col justify-center items-center p-4 md:p-0 mt-4 md:mt-0"
+              >
+                <span class="medium-light-green text-[15px]">Project:</span>
+                <p class="font-playfair text-white text-[22px]">Farm Design</p>
+                <span class="medium-light-green text-[15px] pt-2.5"
+                  >Client:</span
+                >
+                <p class="font-playfair text-white text-[22px]">Alex Milan</p>
+                <span class="medium-light-green text-[15px] pt-2.5"
+                  >Location:</span
+                >
+                <p class="font-playfair text-white text-[22px]">
+                  Mississippi, USA
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide relative flex flex-col md:block">
+              <img
+                src="images/project-img-2.webp"
+                alt="img"
+                class="w-full object-cover h-auto lazyload"
+                loading="lazy"
+              />
+              <div
+                class="bg-dark-green md:absolute md:w-[266px] md:h-[333px] z-10 md:left-0 md:bottom-0 flex flex-col justify-center items-center p-4 md:p-0 mt-4 md:mt-0"
+              >
+                <span class="medium-light-green text-[15px]">Project:</span>
+                <p class="font-playfair text-white text-[22px]">Lawn Design</p>
+                <span class="medium-light-green text-[15px] pt-2.5"
+                  >Client:</span
+                >
+                <p class="font-playfair text-white text-[22px]">Roger Garcia</p>
+                <span class="medium-light-green text-[15px] pt-2.5"
+                  >Location:</span
+                >
+                <p class="font-playfair text-white text-[22px]">
+                  Mount Sinai, USA
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide relative flex flex-col md:block">
+              <img
+                src="images/project-img-1.webp"
+                alt="img"
+                class="w-full object-cover h-auto lazyload"
+                loading="lazy"
+              />
+              <div
+                class="bg-dark-green md:absolute md:w-[266px] md:h-[333px] z-10 md:left-0 md:bottom-0 flex flex-col justify-center items-center p-4 md:p-0 mt-4 md:mt-0"
+              >
+                <span class="medium-light-green text-[15px]">Project:</span>
+                <p class="font-playfair text-white text-[22px]">Farm Design</p>
+                <span class="medium-light-green text-[15px] pt-2.5"
+                  >Client:</span
+                >
+                <p class="font-playfair text-white text-[22px]">Alex Milan</p>
+                <span class="medium-light-green text-[15px] pt-2.5"
+                  >Location:</span
+                >
+                <p class="font-playfair text-white text-[22px]">
+                  Mississippi, USA
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide relative flex flex-col md:block">
+              <img
+                src="images/project-img-2.webp"
+                alt="img"
+                class="w-full object-cover h-auto lazyload"
+                loading="lazy"
+              />
+              <div
+                class="bg-dark-green md:absolute md:w-[266px] md:h-[333px] z-10 md:left-0 md:bottom-0 flex flex-col justify-center items-center p-4 md:p-0 mt-4 md:mt-0"
+              >
+                <span class="medium-light-green text-[15px]">Project:</span>
+                <p class="font-playfair text-white text-[22px]">Lawn Design</p>
+                <span class="medium-light-green text-[15px] pt-2.5"
+                  >Client:</span
+                >
+                <p class="font-playfair text-white text-[22px]">Roger Garcia</p>
+                <span class="medium-light-green text-[15px] pt-2.5"
+                  >Location:</span
+                >
+                <p class="font-playfair text-white text-[22px]">
+                  Mount Sinai, USA
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrows for slider -->
+        <div class="mt-[40px] flex items-center gap-[25px] hidden md:flex">
+          <div
+            class="swiper-button-prev flex items-center justify-center cursor-pointer"
+          >
+            <svg
+              width="70"
+              height="70"
+              viewBox="0 0 70 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M69 1V69H1V1H69Z"
+                fill="white"
+                stroke="#A4D6CF"
+                stroke-width="2"
+              />
+              <path
+                d="M27.9393 33.9393C27.3536 34.5251 27.3536 35.4749 27.9393 36.0607L37.4853 45.6066C38.0711 46.1924 39.0208 46.1924 39.6066 45.6066C40.1924 45.0208 40.1924 44.0711 39.6066 43.4853L31.1213 35L39.6066 26.5147C40.1924 25.9289 40.1924 24.9792 39.6066 24.3934C39.0208 23.8076 38.0711 23.8076 37.4853 24.3934L27.9393 33.9393ZM30 33.5H29V36.5H30V33.5Z"
+                fill="#177165"
+              />
+            </svg>
+          </div>
+          <div
+            class="swiper-button-next flex items-center justify-center cursor-pointer"
+          >
+            <svg
+              width="70"
+              height="70"
+              viewBox="0 0 70 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M69 1V69H1V1H69Z"
+                fill="white"
+                stroke="#A4D6CF"
+                stroke-width="2"
+              />
+              <path
+                d="M42.0607 36.0607C42.6464 35.4749 42.6464 34.5251 42.0607 33.9393L32.5147 24.3934C31.9289 23.8076 30.9792 23.8076 30.3934 24.3934C29.8076 24.9792 29.8076 25.9289 30.3934 26.5147L38.8787 35L30.3934 43.4853C29.8076 44.0711 29.8076 45.0208 30.3934 45.6066C30.9792 46.1924 31.9289 46.1924 32.5147 45.6066L42.0607 36.0607ZM39 36.5H41V33.5H39V36.5Z"
+                fill="#177165"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-light-green py-8 md:py-20">
+      <div class="container">
+        <div class="flex justify-center md:justify-start items-center gap-2">
+          <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+          <span class="text-lg text-gray-500">Happy Clients</span>
+        </div>
+        <h2
+          class="font-playfair text-3xl md:text-5xl dark-green md:pr-16 mt-2.5 leading-tight text-center md:text-start"
+        >
+          Farmzi got best feedback from happy clients
+        </h2>
+        <!-- Slider -->
+        <div class="swiper mySwiper-testimonials mt-8">
+          <div class="swiper-wrapper">
+            <!-- Testimonial 1 -->
+            <div
+              class="swiper-slide relative bg-white py-14 px-14 max-w-full md:max-w-[540px]"
+            >
+              <blockquote
+                class="font-playfair dark-green text-[22px] relative z-10"
+              >
+                “Lorem Ipsum is simply dummy text the printing and typesetting
+                industry. Lorem has been the industry's standard dummy text
+                since the 1500 when an unknown printer took galley type and
+                scram bled it make a type specimen book”
+              </blockquote>
+              <div
+                class="flex justify-center md:justify-start items-center gap-2 pt-10"
+              >
+                <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+                <span class="text-lg text-gray-500">Designer of Musion</span>
+              </div>
+              <p class="font-playfair dark-green text-[26px] pt-3.5">
+                Jhon Doe
+              </p>
+              <svg
+                class="absolute top-2.5 left-0 right-0 m-auto z-0"
+                width="219"
+                height="179"
+                viewBox="0 0 219 179"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M54.099 178.12C43.7737 178.12 35.3257 176.008 28.755 171.784C22.1843 167.56 16.787 162.163 12.563 155.592C7.86967 147.613 4.58434 139.4 2.707 130.952C1.299 122.035 0.595002 114.76 0.595002 109.128C0.595002 86.1306 6.46167 65.2453 18.195 46.472C29.9283 27.6987 48.2323 12.4453 73.107 0.711956L79.443 13.384C64.8937 19.4853 52.2217 29.1066 41.427 42.248C31.1017 55.3893 25.939 68.7653 25.939 82.376C25.939 88.008 26.643 92.936 28.051 97.16C35.5603 91.0586 44.243 88.008 54.099 88.008C66.3017 88.008 76.8617 91.9973 85.779 99.976C94.6963 107.955 99.155 118.984 99.155 133.064C99.155 146.205 94.6963 157 85.779 165.448C76.8617 173.896 66.3017 178.12 54.099 178.12ZM173.779 178.12C163.454 178.12 155.006 176.008 148.435 171.784C141.864 167.56 136.467 162.163 132.243 155.592C127.55 147.613 124.264 139.4 122.387 130.952C120.979 122.035 120.275 114.76 120.275 109.128C120.275 86.1306 126.142 65.2453 137.875 46.472C149.608 27.6987 167.912 12.4453 192.787 0.711956L199.123 13.384C184.574 19.4853 171.902 29.1066 161.107 42.248C150.782 55.3893 145.619 68.7653 145.619 82.376C145.619 88.008 146.323 92.936 147.731 97.16C155.24 91.0586 163.923 88.008 173.779 88.008C185.982 88.008 196.542 91.9973 205.459 99.976C214.376 107.955 218.835 118.984 218.835 133.064C218.835 146.205 214.376 157 205.459 165.448C196.542 173.896 185.982 178.12 173.779 178.12Z"
+                  fill="#E1F4F2"
+                  fill-opacity="0.6"
+                />
+              </svg>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div
+              class="swiper-slide relative bg-white py-14 px-14 max-w-full md:max-w-[540px]"
+            >
+              <blockquote
+                class="font-playfair dark-green text-[22px] relative z-10"
+              >
+                “Lorem Ipsum is simply dummy text the printing and typesetting
+                industry. Lorem has been the industry's standard dummy text
+                since the 1500 when an unknown printer took galley type and
+                scram bled it make a type specimen book”
+              </blockquote>
+              <div
+                class="flex justify-center md:justify-start items-center gap-2 pt-10"
+              >
+                <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+                <span class="text-lg text-gray-500">CEO of Musion</span>
+              </div>
+              <p class="font-playfair dark-green text-[26px] pt-3.5">
+                Rachel Patterson
+              </p>
+              <svg
+                class="absolute top-2.5 left-0 right-0 m-auto z-0"
+                width="219"
+                height="179"
+                viewBox="0 0 219 179"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M54.099 178.12C43.7737 178.12 35.3257 176.008 28.755 171.784C22.1843 167.56 16.787 162.163 12.563 155.592C7.86967 147.613 4.58434 139.4 2.707 130.952C1.299 122.035 0.595002 114.76 0.595002 109.128C0.595002 86.1306 6.46167 65.2453 18.195 46.472C29.9283 27.6987 48.2323 12.4453 73.107 0.711956L79.443 13.384C64.8937 19.4853 52.2217 29.1066 41.427 42.248C31.1017 55.3893 25.939 68.7653 25.939 82.376C25.939 88.008 26.643 92.936 28.051 97.16C35.5603 91.0586 44.243 88.008 54.099 88.008C66.3017 88.008 76.8617 91.9973 85.779 99.976C94.6963 107.955 99.155 118.984 99.155 133.064C99.155 146.205 94.6963 157 85.779 165.448C76.8617 173.896 66.3017 178.12 54.099 178.12ZM173.779 178.12C163.454 178.12 155.006 176.008 148.435 171.784C141.864 167.56 136.467 162.163 132.243 155.592C127.55 147.613 124.264 139.4 122.387 130.952C120.979 122.035 120.275 114.76 120.275 109.128C120.275 86.1306 126.142 65.2453 137.875 46.472C149.608 27.6987 167.912 12.4453 192.787 0.711956L199.123 13.384C184.574 19.4853 171.902 29.1066 161.107 42.248C150.782 55.3893 145.619 68.7653 145.619 82.376C145.619 88.008 146.323 92.936 147.731 97.16C155.24 91.0586 163.923 88.008 173.779 88.008C185.982 88.008 196.542 91.9973 205.459 99.976C214.376 107.955 218.835 118.984 218.835 133.064C218.835 146.205 214.376 157 205.459 165.448C196.542 173.896 185.982 178.12 173.779 178.12Z"
+                  fill="#E1F4F2"
+                  fill-opacity="0.6"
+                />
+              </svg>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div
+              class="swiper-slide relative bg-white py-14 px-14 max-w-full md:max-w-[540px]"
+            >
+              <blockquote
+                class="font-playfair dark-green text-[22px] relative z-10"
+              >
+                “Lorem Ipsum is simply dummy text the printing and typesetting
+                industry. Lorem has been the industry's standard dummy text
+                since the 1500 when an unknown printer took galley type and
+                scram bled it make a type specimen book”
+              </blockquote>
+              <div
+                class="flex justify-center md:justify-start items-center gap-2 pt-10"
+              >
+                <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+                <span class="text-lg text-gray-500">Founder of Musion</span>
+              </div>
+              <p class="font-playfair dark-green text-[26px] pt-3.5">
+                Shoshana Horsley
+              </p>
+              <svg
+                class="absolute top-2.5 left-0 right-0 m-auto z-0"
+                width="219"
+                height="179"
+                viewBox="0 0 219 179"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M54.099 178.12c-10.325 0-18.773-2.112-25.344-6.336-6.571-4.224-11.968-9.621-16.192-16.192C7.87 147.613 4.584 139.4 2.707 130.952 1.299 122.035.595 114.76.595 109.128c0-22.997 5.867-43.882 17.6-62.656C30.928 27.699 49.232 12.445 74.107.712l6.336 12.672c-14.549 6.101-27.221 15.722-38.016 28.864C31.102 55.389 25.939 68.765 25.939 82.376c0 5.632.704 10.56 2.112 14.784 7.509-6.101 16.192-9.152 26.048-9.152 12.203 0 22.763 3.989 31.68 11.968 8.917 7.979 13.376 19.008 13.376 33.088s-4.459 26.995-13.376 35.443c-8.917 8.448-19.477 12.672-31.68 12.672Zm119.68 0c-10.325 0-18.773-2.112-25.344-6.336-6.571-4.224-11.968-9.621-16.192-16.192-4.693-7.979-7.979-16.192-9.856-24.64-1.408-8.917-2.112-16.192-2.112-21.824 0-22.997 5.867-43.882 17.6-62.656C150.608 27.699 168.912 12.445 193.787.712l6.336 12.672c-14.549 6.101-27.221 15.722-38.016 28.864-10.325 13.141-15.488 26.517-15.488 40.128 0 5.632.704 10.56 2.112 14.784 7.509-6.101 16.192-9.152 26.048-9.152 12.203 0 22.763 3.989 31.68 11.968 8.917 7.979 13.376 19.008 13.376 33.088s-4.459 26.995-13.376 35.443c-8.917 8.448-19.477 12.672-31.68 12.672Z"
+                  fill="#E1F4F2"
+                  fill-opacity=".6"
+                />
+              </svg>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div
+              class="swiper-slide relative bg-white py-14 px-14 max-w-full md:max-w-[540px]"
+            >
+              <blockquote
+                class="font-playfair dark-green text-[22px] relative z-10"
+              >
+                “Lorem Ipsum is simply dummy text the printing and typesetting
+                industry. Lorem has been the industry's standard dummy text
+                since the 1500 when an unknown printer took galley type and
+                scram bled it make a type specimen book”
+              </blockquote>
+              <div
+                class="flex justify-center md:justify-start items-center gap-2 pt-10"
+              >
+                <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+                <span class="text-lg text-gray-500">Designer of Musion</span>
+              </div>
+              <p class="font-playfair dark-green text-[26px] pt-3.5">
+                Jhon Doe
+              </p>
+              <svg
+                class="absolute top-2.5 left-0 right-0 m-auto z-0"
+                width="219"
+                height="179"
+                viewBox="0 0 219 179"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M54.099 178.12C43.7737 178.12 35.3257 176.008 28.755 171.784C22.1843 167.56 16.787 162.163 12.563 155.592C7.86967 147.613 4.58434 139.4 2.707 130.952C1.299 122.035 0.595002 114.76 0.595002 109.128C0.595002 86.1306 6.46167 65.2453 18.195 46.472C29.9283 27.6987 48.2323 12.4453 73.107 0.711956L79.443 13.384C64.8937 19.4853 52.2217 29.1066 41.427 42.248C31.1017 55.3893 25.939 68.7653 25.939 82.376C25.939 88.008 26.643 92.936 28.051 97.16C35.5603 91.0586 44.243 88.008 54.099 88.008C66.3017 88.008 76.8617 91.9973 85.779 99.976C94.6963 107.955 99.155 118.984 99.155 133.064C99.155 146.205 94.6963 157 85.779 165.448C76.8617 173.896 66.3017 178.12 54.099 178.12ZM173.779 178.12C163.454 178.12 155.006 176.008 148.435 171.784C141.864 167.56 136.467 162.163 132.243 155.592C127.55 147.613 124.264 139.4 122.387 130.952C120.979 122.035 120.275 114.76 120.275 109.128C120.275 86.1306 126.142 65.2453 137.875 46.472C149.608 27.6987 167.912 12.4453 192.787 0.711956L199.123 13.384C184.574 19.4853 171.902 29.1066 161.107 42.248C150.782 55.3893 145.619 68.7653 145.619 82.376C145.619 88.008 146.323 92.936 147.731 97.16C155.24 91.0586 163.923 88.008 173.779 88.008C185.982 88.008 196.542 91.9973 205.459 99.976C214.376 107.955 218.835 118.984 218.835 133.064C218.835 146.205 214.376 157 205.459 165.448C196.542 173.896 185.982 178.12 173.779 178.12Z"
+                  fill="#E1F4F2"
+                  fill-opacity="0.6"
+                />
+              </svg>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div
+              class="swiper-slide relative bg-white py-14 px-14 max-w-full md:max-w-[540px]"
+            >
+              <blockquote
+                class="font-playfair dark-green text-[22px] relative z-10"
+              >
+                “Lorem Ipsum is simply dummy text the printing and typesetting
+                industry. Lorem has been the industry's standard dummy text
+                since the 1500 when an unknown printer took galley type and
+                scram bled it make a type specimen book”
+              </blockquote>
+              <div
+                class="flex justify-center md:justify-start items-center gap-2 pt-10"
+              >
+                <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+                <span class="text-lg text-gray-500">CEO of Musion</span>
+              </div>
+              <p class="font-playfair dark-green text-[26px] pt-3.5">
+                Rachel Patterson
+              </p>
+              <svg
+                class="absolute top-2.5 left-0 right-0 m-auto z-0"
+                width="219"
+                height="179"
+                viewBox="0 0 219 179"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M54.099 178.12C43.7737 178.12 35.3257 176.008 28.755 171.784C22.1843 167.56 16.787 162.163 12.563 155.592C7.86967 147.613 4.58434 139.4 2.707 130.952C1.299 122.035 0.595002 114.76 0.595002 109.128C0.595002 86.1306 6.46167 65.2453 18.195 46.472C29.9283 27.6987 48.2323 12.4453 73.107 0.711956L79.443 13.384C64.8937 19.4853 52.2217 29.1066 41.427 42.248C31.1017 55.3893 25.939 68.7653 25.939 82.376C25.939 88.008 26.643 92.936 28.051 97.16C35.5603 91.0586 44.243 88.008 54.099 88.008C66.3017 88.008 76.8617 91.9973 85.779 99.976C94.6963 107.955 99.155 118.984 99.155 133.064C99.155 146.205 94.6963 157 85.779 165.448C76.8617 173.896 66.3017 178.12 54.099 178.12ZM173.779 178.12C163.454 178.12 155.006 176.008 148.435 171.784C141.864 167.56 136.467 162.163 132.243 155.592C127.55 147.613 124.264 139.4 122.387 130.952C120.979 122.035 120.275 114.76 120.275 109.128C120.275 86.1306 126.142 65.2453 137.875 46.472C149.608 27.6987 167.912 12.4453 192.787 0.711956L199.123 13.384C184.574 19.4853 171.902 29.1066 161.107 42.248C150.782 55.3893 145.619 68.7653 145.619 82.376C145.619 88.008 146.323 92.936 147.731 97.16C155.24 91.0586 163.923 88.008 173.779 88.008C185.982 88.008 196.542 91.9973 205.459 99.976C214.376 107.955 218.835 118.984 218.835 133.064C218.835 146.205 214.376 157 205.459 165.448C196.542 173.896 185.982 178.12 173.779 178.12Z"
+                  fill="#E1F4F2"
+                  fill-opacity="0.6"
+                />
+              </svg>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div
+              class="swiper-slide relative bg-white py-14 px-14 max-w-full md:max-w-[540px]"
+            >
+              <blockquote
+                class="font-playfair dark-green text-[22px] relative z-10"
+              >
+                “Lorem Ipsum is simply dummy text the printing and typesetting
+                industry. Lorem has been the industry's standard dummy text
+                since the 1500 when an unknown printer took galley type and
+                scram bled it make a type specimen book”
+              </blockquote>
+              <div
+                class="flex justify-center md:justify-start items-center gap-2 pt-10"
+              >
+                <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+                <span class="text-lg text-gray-500">Founder of Musion</span>
+              </div>
+              <p class="font-playfair dark-green text-[26px] pt-3.5">
+                Shoshana Horsley
+              </p>
+              <svg
+                class="absolute top-2.5 left-0 right-0 m-auto z-0"
+                width="219"
+                height="179"
+                viewBox="0 0 219 179"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M54.099 178.12c-10.325 0-18.773-2.112-25.344-6.336-6.571-4.224-11.968-9.621-16.192-16.192C7.87 147.613 4.584 139.4 2.707 130.952 1.299 122.035.595 114.76.595 109.128c0-22.997 5.867-43.882 17.6-62.656C30.928 27.699 49.232 12.445 74.107.712l6.336 12.672c-14.549 6.101-27.221 15.722-38.016 28.864C31.102 55.389 25.939 68.765 25.939 82.376c0 5.632.704 10.56 2.112 14.784 7.509-6.101 16.192-9.152 26.048-9.152 12.203 0 22.763 3.989 31.68 11.968 8.917 7.979 13.376 19.008 13.376 33.088s-4.459 26.995-13.376 35.443c-8.917 8.448-19.477 12.672-31.68 12.672Zm119.68 0c-10.325 0-18.773-2.112-25.344-6.336-6.571-4.224-11.968-9.621-16.192-16.192-4.693-7.979-7.979-16.192-9.856-24.64-1.408-8.917-2.112-16.192-2.112-21.824 0-22.997 5.867-43.882 17.6-62.656C150.608 27.699 168.912 12.445 193.787.712l6.336 12.672c-14.549 6.101-27.221 15.722-38.016 28.864-10.325 13.141-15.488 26.517-15.488 40.128 0 5.632.704 10.56 2.112 14.784 7.509-6.101 16.192-9.152 26.048-9.152 12.203 0 22.763 3.989 31.68 11.968 8.917 7.979 13.376 19.008 13.376 33.088s-4.459 26.995-13.376 35.443c-8.917 8.448-19.477 12.672-31.68 12.672Z"
+                  fill="#E1F4F2"
+                  fill-opacity=".6"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="py-8 md:py-20">
+      <div class="container">
+        <div class="flex justify-center md:justify-start items-center gap-2">
+          <span class="inline-block w-[40px] h-px bg-gray-500"></span>
+          <span class="text-lg text-gray-500">Latest News</span>
+        </div>
+        <h2
+          class="font-playfair text-3xl md:text-5xl dark-green md:pr-16 mt-2.5 leading-tight text-center md:text-start"
+        >
+          Check now latest tips and tricks of gardening and landscaping from
+          blog.
+        </h2>
+        <div
+          class="mt-12 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 md:gap-0"
+        >
+          <!-- Article 1 -->
+          <article
+            class="w-full md:w-[calc(50%-15px)] bg-light-green overflow-hidden"
+          >
+            <img
+              src="images/article-img-1.webp"
+              alt="Post image description"
+              class="w-full object-cover h-auto lazyload"
+              loading="lazy"
+            />
+            <!-- Info -->
+            <div
+              class="flex items-center gap-5 px-4 pb-2 pt-7 text-sm text-gray-600"
+            >
+              <div>
+                <span class="dark-green">Date:</span>
+                <time datetime="2025-07-09" class="text-gray-500 text-[15px]"
+                  >March 23, 2022</time
+                >
+              </div>
+              <div>
+                <span class="dark-green">By:</span>
+                <span class="author text-gray-500 text-[15px]">John Doe</span>
+              </div>
+            </div>
+            <h2 class="px-4 text-2xl font-playfair dark-green mt-4">
+              If You're Not Getting Your Garden Harvested Things!
+            </h2>
+            <p class="px-4 py-4 text-gray-500">
+              Lorem Ipsum is simply dummy text the printing and tpesetting
+              industry. Lorem industry's standard dummy.
+            </p>
+            <div class="px-4 pb-4 my-5">
+              <a
+                href="#"
+                class="inline-block bg-white dark-green px-12 py-2 transition-colors"
+              >
+                Read More +
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article
+            class="w-full md:w-[calc(50%-15px)] bg-light-green overflow-hidden"
+          >
+            <img
+              src="images/article-img-2.webp"
+              alt="Post image description"
+              class="w-full object-cover h-auto lazyload"
+              loading="lazy"
+            />
+            <!-- Info -->
+            <div
+              class="flex items-center gap-5 px-4 pb-2 pt-7 text-sm text-gray-600"
+            >
+              <div>
+                <span class="dark-green">Date:</span>
+                <time datetime="2025-07-09" class="text-gray-500 text-[15px]"
+                  >March 26, 2022</time
+                >
+              </div>
+              <div>
+                <span class="dark-green">By:</span>
+                <span class="author text-gray-500 text-[15px]"
+                  >Kristofer Pennell</span
+                >
+              </div>
+            </div>
+            <h2 class="px-4 text-2xl font-playfair dark-green mt-4">
+              How to Plant Flowers with a Success Rate of 90% or Higher!
+            </h2>
+            <p class="px-4 py-4 text-gray-500">
+              Lorem Ipsum is simply dummy text the printing and tpesetting
+              industry. Lorem industry's standard dummy.
+            </p>
+            <div class="px-4 pb-4 my-5">
+              <a
+                href="#"
+                class="inline-block bg-white dark-green px-12 py-2 transition-colors"
+              >
+                Read More +
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="bg-light-green py-8 md:py-20">
+      <div class="container">
+        <div
+          class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 md:gap-0"
+        >
+          <img
+            class="max-w-[200px] md:max-w-none lazyload"
+            src="images/partner-img-1.webp"
+            alt="img"
+            loading="lazy"
+          />
+          <img
+            class="max-w-[200px] md:max-w-none lazyload"
+            src="images/partner-img-2.webp"
+            alt="img"
+            loading="lazy"
+          />
+          <img
+            class="max-w-[200px] md:max-w-none lazyload"
+            src="images/partner-img-3.webp"
+            alt="img"
+            loading="lazy"
+          />
+          <img
+            class="max-w-[200px] md:max-w-none lazyload"
+            src="images/partner-img-4.webp"
+            alt="img"
+            loading="lazy"
+          />
+          <img
+            class="max-w-[200px] md:max-w-none lazyload"
+            src="images/partner-img-5.webp"
+            alt="img"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-dark-green pt-8 md:pt-24">
+      <div class="container">
+        <div
+          class="flex flex-col md:flex-row justify-between gap-24 items-center md:items-start"
+        >
+          <!-- Navigation menu -->
+          <div
+            class="basis-[60%] flex flex-wrap justify-between items-start gap-5"
+          >
+            <!-- List 1 -->
+            <div>
+              <p class="font-playfair text-3xl text-white">Explore</p>
+              <ul>
+                <!-- List item 1 -->
+                <li class="mt-10 group">
+                  <a class="inline-block text-white text-[15px]" href="#">
+                    <div class="flex items-center gap-3.5 relative">
+                      <svg
+                        width="14"
+                        height="52"
+                        viewBox="0 0 14 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.61146 24.97L4.91917 21.2197C4.70883 20.9268 4.36809 20.9268 4.15775 21.2197C3.94742 21.5127 3.94742 21.9874 4.15775 22.2804L6.4706 25.4997L4.15859 28.7202C3.94826 29.0132 3.94826 29.4879 4.15859 29.7808C4.26342 29.9273 4.40107 30 4.53888 30C4.67669 30 4.8145 29.9268 4.9195 29.7803L7.61179 26.03C7.82179 25.7364 7.82179 25.263 7.61146 24.97ZM10.8422 24.97L8.14991 21.2197C7.93958 20.9268 7.59884 20.9268 7.3885 21.2197C7.17817 21.5127 7.17817 21.9874 7.3885 22.2804L9.70135 25.4997L7.38934 28.7202C7.17901 29.0132 7.17901 29.4879 7.38934 29.7808C7.49367 29.9273 7.63165 30 7.76963 30C7.90761 30 8.04525 29.9268 8.15025 29.7803L10.8425 26.03C11.0525 25.7364 11.0525 25.263 10.8422 24.97Z"
+                          fill="white"
+                        />
+                      </svg>
+                      About us
+                      <span
+                        class="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </div>
+                  </a>
+                </li>
+                <!-- List item 2 -->
+                <li class="group">
+                  <a class="inline-block text-white text-[15px]" href="#">
+                    <div class="flex items-center gap-3.5 relative">
+                      <svg
+                        width="14"
+                        height="52"
+                        viewBox="0 0 14 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.61146 24.97L4.91917 21.2197C4.70883 20.9268 4.36809 20.9268 4.15775 21.2197C3.94742 21.5127 3.94742 21.9874 4.15775 22.2804L6.4706 25.4997L4.15859 28.7202C3.94826 29.0132 3.94826 29.4879 4.15859 29.7808C4.26342 29.9273 4.40107 30 4.53888 30C4.67669 30 4.8145 29.9268 4.9195 29.7803L7.61179 26.03C7.82179 25.7364 7.82179 25.263 7.61146 24.97ZM10.8422 24.97L8.14991 21.2197C7.93958 20.9268 7.59884 20.9268 7.3885 21.2197C7.17817 21.5127 7.17817 21.9874 7.3885 22.2804L9.70135 25.4997L7.38934 28.7202C7.17901 29.0132 7.17901 29.4879 7.38934 29.7808C7.49367 29.9273 7.63165 30 7.76963 30C7.90761 30 8.04525 29.9268 8.15025 29.7803L10.8425 26.03C11.0525 25.7364 11.0525 25.263 10.8422 24.97Z"
+                          fill="white"
+                        />
+                      </svg>
+                      FAQ
+                      <span
+                        class="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </div>
+                  </a>
+                </li>
+                <!-- List item 3 -->
+                <li class="group">
+                  <a class="inline-block text-white text-[15px]" href="#">
+                    <div class="flex items-center gap-3.5 relative">
+                      <svg
+                        width="14"
+                        height="52"
+                        viewBox="0 0 14 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.61146 24.97L4.91917 21.2197C4.70883 20.9268 4.36809 20.9268 4.15775 21.2197C3.94742 21.5127 3.94742 21.9874 4.15775 22.2804L6.4706 25.4997L4.15859 28.7202C3.94826 29.0132 3.94826 29.4879 4.15859 29.7808C4.26342 29.9273 4.40107 30 4.53888 30C4.67669 30 4.8145 29.9268 4.9195 29.7803L7.61179 26.03C7.82179 25.7364 7.82179 25.263 7.61146 24.97ZM10.8422 24.97L8.14991 21.2197C7.93958 20.9268 7.59884 20.9268 7.3885 21.2197C7.17817 21.5127 7.17817 21.9874 7.3885 22.2804L9.70135 25.4997L7.38934 28.7202C7.17901 29.0132 7.17901 29.4879 7.38934 29.7808C7.49367 29.9273 7.63165 30 7.76963 30C7.90761 30 8.04525 29.9268 8.15025 29.7803L10.8425 26.03C11.0525 25.7364 11.0525 25.263 10.8422 24.97Z"
+                          fill="white"
+                        />
+                      </svg>
+                      About us
+                      <span
+                        class="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- List 2 -->
+            <div>
+              <p class="font-playfair text-3xl text-white">Information</p>
+              <ul>
+                <!-- List item 1 -->
+                <li class="mt-10 group">
+                  <a class="inline-block text-white text-[15px]" href="#">
+                    <div class="flex items-center gap-3.5 relative">
+                      <svg
+                        width="14"
+                        height="52"
+                        viewBox="0 0 14 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.61146 24.97L4.91917 21.2197C4.70883 20.9268 4.36809 20.9268 4.15775 21.2197C3.94742 21.5127 3.94742 21.9874 4.15775 22.2804L6.4706 25.4997L4.15859 28.7202C3.94826 29.0132 3.94826 29.4879 4.15859 29.7808C4.26342 29.9273 4.40107 30 4.53888 30C4.67669 30 4.8145 29.9268 4.9195 29.7803L7.61179 26.03C7.82179 25.7364 7.82179 25.263 7.61146 24.97ZM10.8422 24.97L8.14991 21.2197C7.93958 20.9268 7.59884 20.9268 7.3885 21.2197C7.17817 21.5127 7.17817 21.9874 7.3885 22.2804L9.70135 25.4997L7.38934 28.7202C7.17901 29.0132 7.17901 29.4879 7.38934 29.7808C7.49367 29.9273 7.63165 30 7.76963 30C7.90761 30 8.04525 29.9268 8.15025 29.7803L10.8425 26.03C11.0525 25.7364 11.0525 25.263 10.8422 24.97Z"
+                          fill="white"
+                        />
+                      </svg>
+                      Style Guide
+                      <span
+                        class="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </div>
+                  </a>
+                </li>
+                <!-- List item 2 -->
+                <li class="group">
+                  <a class="inline-block text-white text-[15px]" href="#">
+                    <div class="flex items-center gap-3.5 relative">
+                      <svg
+                        width="14"
+                        height="52"
+                        viewBox="0 0 14 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.61146 24.97L4.91917 21.2197C4.70883 20.9268 4.36809 20.9268 4.15775 21.2197C3.94742 21.5127 3.94742 21.9874 4.15775 22.2804L6.4706 25.4997L4.15859 28.7202C3.94826 29.0132 3.94826 29.4879 4.15859 29.7808C4.26342 29.9273 4.40107 30 4.53888 30C4.67669 30 4.8145 29.9268 4.9195 29.7803L7.61179 26.03C7.82179 25.7364 7.82179 25.263 7.61146 24.97ZM10.8422 24.97L8.14991 21.2197C7.93958 20.9268 7.59884 20.9268 7.3885 21.2197C7.17817 21.5127 7.17817 21.9874 7.3885 22.2804L9.70135 25.4997L7.38934 28.7202C7.17901 29.0132 7.17901 29.4879 7.38934 29.7808C7.49367 29.9273 7.63165 30 7.76963 30C7.90761 30 8.04525 29.9268 8.15025 29.7803L10.8425 26.03C11.0525 25.7364 11.0525 25.263 10.8422 24.97Z"
+                          fill="white"
+                        />
+                      </svg>
+                      Change Log
+                      <span
+                        class="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </div>
+                  </a>
+                </li>
+                <!-- List item 3 -->
+                <li class="group">
+                  <a class="inline-block text-white text-[15px]" href="#">
+                    <div class="flex items-center gap-3.5 relative">
+                      <svg
+                        width="14"
+                        height="52"
+                        viewBox="0 0 14 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.61146 24.97L4.91917 21.2197C4.70883 20.9268 4.36809 20.9268 4.15775 21.2197C3.94742 21.5127 3.94742 21.9874 4.15775 22.2804L6.4706 25.4997L4.15859 28.7202C3.94826 29.0132 3.94826 29.4879 4.15859 29.7808C4.26342 29.9273 4.40107 30 4.53888 30C4.67669 30 4.8145 29.9268 4.9195 29.7803L7.61179 26.03C7.82179 25.7364 7.82179 25.263 7.61146 24.97ZM10.8422 24.97L8.14991 21.2197C7.93958 20.9268 7.59884 20.9268 7.3885 21.2197C7.17817 21.5127 7.17817 21.9874 7.3885 22.2804L9.70135 25.4997L7.38934 28.7202C7.17901 29.0132 7.17901 29.4879 7.38934 29.7808C7.49367 29.9273 7.63165 30 7.76963 30C7.90761 30 8.04525 29.9268 8.15025 29.7803L10.8425 26.03C11.0525 25.7364 11.0525 25.263 10.8422 24.97Z"
+                          fill="white"
+                        />
+                      </svg>
+                      License
+                      <span
+                        class="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- List 3 -->
+            <div>
+              <p class="font-playfair text-3xl text-white">Service</p>
+              <ul>
+                <!-- List item 1 -->
+                <li class="mt-10 group">
+                  <a class="inline-block text-white text-[15px]" href="#">
+                    <div class="flex items-center gap-3.5 relative">
+                      <svg
+                        width="14"
+                        height="52"
+                        viewBox="0 0 14 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.61146 24.97L4.91917 21.2197C4.70883 20.9268 4.36809 20.9268 4.15775 21.2197C3.94742 21.5127 3.94742 21.9874 4.15775 22.2804L6.4706 25.4997L4.15859 28.7202C3.94826 29.0132 3.94826 29.4879 4.15859 29.7808C4.26342 29.9273 4.40107 30 4.53888 30C4.67669 30 4.8145 29.9268 4.9195 29.7803L7.61179 26.03C7.82179 25.7364 7.82179 25.263 7.61146 24.97ZM10.8422 24.97L8.14991 21.2197C7.93958 20.9268 7.59884 20.9268 7.3885 21.2197C7.17817 21.5127 7.17817 21.9874 7.3885 22.2804L9.70135 25.4997L7.38934 28.7202C7.17901 29.0132 7.17901 29.4879 7.38934 29.7808C7.49367 29.9273 7.63165 30 7.76963 30C7.90761 30 8.04525 29.9268 8.15025 29.7803L10.8425 26.03C11.0525 25.7364 11.0525 25.263 10.8422 24.97Z"
+                          fill="white"
+                        />
+                      </svg>
+                      Flower
+                      <span
+                        class="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </div>
+                  </a>
+                </li>
+                <!-- List item 2 -->
+                <li class="group">
+                  <a class="inline-block text-white text-[15px]" href="#">
+                    <div class="flex items-center gap-3.5 relative">
+                      <svg
+                        width="14"
+                        height="52"
+                        viewBox="0 0 14 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.61146 24.97L4.91917 21.2197C4.70883 20.9268 4.36809 20.9268 4.15775 21.2197C3.94742 21.5127 3.94742 21.9874 4.15775 22.2804L6.4706 25.4997L4.15859 28.7202C3.94826 29.0132 3.94826 29.4879 4.15859 29.7808C4.26342 29.9273 4.40107 30 4.53888 30C4.67669 30 4.8145 29.9268 4.9195 29.7803L7.61179 26.03C7.82179 25.7364 7.82179 25.263 7.61146 24.97ZM10.8422 24.97L8.14991 21.2197C7.93958 20.9268 7.59884 20.9268 7.3885 21.2197C7.17817 21.5127 7.17817 21.9874 7.3885 22.2804L9.70135 25.4997L7.38934 28.7202C7.17901 29.0132 7.17901 29.4879 7.38934 29.7808C7.49367 29.9273 7.63165 30 7.76963 30C7.90761 30 8.04525 29.9268 8.15025 29.7803L10.8425 26.03C11.0525 25.7364 11.0525 25.263 10.8422 24.97Z"
+                          fill="white"
+                        />
+                      </svg>
+                      Planting
+                      <span
+                        class="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </div>
+                  </a>
+                </li>
+                <!-- List item 3 -->
+                <li class="group">
+                  <a class="inline-block text-white text-[15px]" href="#">
+                    <div class="flex items-center gap-3.5 relative">
+                      <svg
+                        width="14"
+                        height="52"
+                        viewBox="0 0 14 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.61146 24.97L4.91917 21.2197C4.70883 20.9268 4.36809 20.9268 4.15775 21.2197C3.94742 21.5127 3.94742 21.9874 4.15775 22.2804L6.4706 25.4997L4.15859 28.7202C3.94826 29.0132 3.94826 29.4879 4.15859 29.7808C4.26342 29.9273 4.40107 30 4.53888 30C4.67669 30 4.8145 29.9268 4.9195 29.7803L7.61179 26.03C7.82179 25.7364 7.82179 25.263 7.61146 24.97ZM10.8422 24.97L8.14991 21.2197C7.93958 20.9268 7.59884 20.9268 7.3885 21.2197C7.17817 21.5127 7.17817 21.9874 7.3885 22.2804L9.70135 25.4997L7.38934 28.7202C7.17901 29.0132 7.17901 29.4879 7.38934 29.7808C7.49367 29.9273 7.63165 30 7.76963 30C7.90761 30 8.04525 29.9268 8.15025 29.7803L10.8425 26.03C11.0525 25.7364 11.0525 25.263 10.8422 24.97Z"
+                          fill="white"
+                        />
+                      </svg>
+                      Watering
+                      <span
+                        class="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="basis-[40%] flex flex-col py-16 px-16 bg-green">
+            <img class="w-[162px]" src="images/icons/logo.svg" alt="logo" />
+            <p class="text-white pt-20">
+              Lorem Ipsum is simply dummy text of the printing and typeset
+              industry has been the industry's standard.
+            </p>
+            <div class="flex mt-7">
+              <img src="images/icons/phone-icon.svg" alt="phone" />
+              <div class="pl-4">
+                <span class="medium-light-green">Call us:</span>
+                <p class="text-white">+00 89 458 648</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-darker-green py-5 text-center mt-8 md:mt-24">
+        <div class="container">
+          <span class="text-white">&copy; 2022 design and developed by</span>
+          <span class="medium-light-green">Brandbes.</span>
+          <span class="text-white">Powered by</span>
+          <span class="medium-light-green">Webflow.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button
+      id="scrollToTop"
+      class="fixed bottom-6 right-6 bg-dark-green text-white p-3 rounded-full shadow-lg hover:bg-medium-light-green hover:scale-110 transform transition-all duration-300 hidden focus:outline-none focus:ring-2 focus:ring-dark-green cursor-pointer"
+      aria-label="Прокрутити до початку сторінки"
+      role="button"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        ></path>
+      </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+@import 'tailwindcss';
+
+.darker-green {
+  color: #0a312c;
+}
+.bg-darker-green {
+  background-color: #0a312c;
+}
+
+.dark-green {
+  color: #177165;
+}
+.bg-dark-green {
+  background-color: #177165;
+}
+.green {
+  color: #23786d;
+}
+.bg-green {
+  background-color: #23786d;
+}
+
+.medium-light-green {
+  color: #a4d6cf;
+}
+.bg-medium-light-green {
+  background-color: #a4d6cf;
+}
+
+.light-green {
+  color: #e1f4f2;
+}
+.bg-light-green {
+  background-color: #e1f4f2;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+  font-optical-sizing: auto;
+}
+
+.container-wide {
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1190px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.achievements-item {
+  position: relative;
+}
+
+.achievements-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #177165;
+  height: 8px;
+  width: 4px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  all: unset;
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: static !important;
+  cursor: pointer;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next:after {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .achievements-item::before {
+    display: none;
+  }
+}
