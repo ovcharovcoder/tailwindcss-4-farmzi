@@ -103,3 +103,25 @@
     display: none;
   }
 }
+
+.rotate-x-90 {
+  transform: rotateX(90deg);
+}
+.rotate-x-0 {
+  transform: rotateX(0deg);
+}
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-100 {
+  opacity: 1;
+}
+
+.rotate-y-90 {
+  transform: rotateY(90deg);
+}
+
+.team-image {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
