@@ -127,7 +127,7 @@
               </div>
               <div class="text-center md:text-start">
                 <a
-                  class="inline-block bg-white dark-green px-10 py-2 mt-14"
+                  class="inline-block bg-white dark-green px-10 py-2 mt-14 transform transition-transform duration-300 hover:scale-105"
                   href="#"
                   >More Service +</a
                 >
@@ -135,9 +135,10 @@
             </div>
             <div>
               <img
+                id="promoImage"
                 src="images/promo-img.webp"
-                alt="img"
-                class="max-w-full h-auto lazyload"
+                alt="promo"
+                class="max-w-full h-auto opacity-0 translate-x-[100px] transition-all duration-700"
                 loading="lazy"
               />
             </div>
@@ -170,7 +171,8 @@
         >
           <div>
             <img
-              class="max-w-full h-auto lazyload"
+              id="aboutImage"
+              class="max-w-full h-auto opacity-0 -translate-x-20 transition-all duration-700"
               src="images/about-img.webp"
               alt="img"
               loading="lazy"
@@ -207,7 +209,7 @@
             </p>
             <div class="text-center md:text-start">
               <a
-                class="inline-block dark-green border-2 px-10 py-2 mt-14"
+                class="inline-block dark-green border-2 px-10 py-2 mt-14 transform transition-transform duration-300 hover:scale-105"
                 href="#"
                 >Learn More +</a
               >
@@ -238,7 +240,7 @@
             href="#"
           >
             <img
-              class="max-w-full h-auto lazyload"
+              class="max-w-full h-auto opacity-0 rotate-x-90 transition-all duration-700 [transform-style:preserve-3d] scroll-fade"
               src="images/sevices-img-1.webp"
               alt="img"
               loading="lazy"
@@ -261,7 +263,7 @@
             href="#"
           >
             <img
-              class="max-w-full h-auto lazyload"
+              class="max-w-full h-auto opacity-0 rotate-x-90 transition-all duration-700 [transform-style:preserve-3d] scroll-fade"
               src="images/sevices-img-2.webp"
               alt="img"
               loading="lazy"
@@ -284,7 +286,7 @@
             href="#"
           >
             <img
-              class="max-w-full h-auto lazyload"
+              class="max-w-full h-auto opacity-0 rotate-x-90 transition-all duration-700 [transform-style:preserve-3d] scroll-fade"
               src="images/sevices-img-3.webp"
               alt="img"
               loading="lazy"
@@ -307,7 +309,7 @@
             href="#"
           >
             <img
-              class="max-w-full h-auto lazyload"
+              class="max-w-full h-auto opacity-0 rotate-x-90 transition-all duration-700 [transform-style:preserve-3d] scroll-fade"
               src="images/sevices-img-4.webp"
               alt="img"
               loading="lazy"
@@ -326,7 +328,9 @@
           </a>
         </div>
         <div class="text-center">
-          <a class="inline-block dark-green border-2 px-10 py-2 mt-14" href="#"
+          <a
+            class="inline-block dark-green border-2 px-10 py-2 mt-14 transform transition-transform duration-300 hover:scale-105"
+            href="#"
             >Learn More +</a
           >
         </div>
@@ -375,7 +379,7 @@
     </section>
 
     <!-- Team Members -->
-    <section class="py-8 md:py-20 relative">
+    <section class="py-8 md:py-20 relative team-section">
       <div class="container">
         <div class="w-full md:max-w-[634px] ml-auto">
           <div
@@ -399,10 +403,10 @@
             href="#"
           >
             <img
-              class="m-auto md:m-0 max-w-full h-auto lazyload"
               src="images/team-img-1.webp"
-              alt="img"
+              alt="team"
               loading="lazy"
+              class="team-image m-auto md:m-0 max-w-full h-auto opacity-0 [transform:rotateY(90deg)] translate-x-20 transition-all duration-1000 [transform-style:preserve-3d]"
             />
             <div
               class="flex items-center gap-2 mt-4 justify-center md:justify-start"
@@ -426,11 +430,10 @@
             href="#"
           >
             <img
-              class="m-auto md:m-0 max-w-full h-auto lazyload"
-              class="m-auto md:m-0"
               src="images/team-img-2.webp"
-              alt="img"
+              alt="team"
               loading="lazy"
+              class="team-image m-auto md:m-0 max-w-full h-auto opacity-0 [transform:rotateY(90deg)] translate-x-20 transition-all duration-1000 [transform-style:preserve-3d]"
             />
             <div
               class="flex items-center gap-2 mt-4 justify-center md:justify-start"
@@ -454,11 +457,12 @@
             href="#"
           >
             <img
-              class="m-auto md:m-0 max-w-full h-auto lazyload"
               src="images/team-img-3.webp"
-              alt="img"
+              alt="team"
               loading="lazy"
+              class="team-image m-auto md:m-0 max-w-full h-auto opacity-0 [transform:rotateY(90deg)] translate-x-20 transition-all duration-1000 [transform-style:preserve-3d]"
             />
+
             <div
               class="flex items-center gap-2 mt-4 justify-center md:justify-start"
             >
@@ -520,12 +524,14 @@
     </section>
 
     <!-- Our achievements -->
-    <section class="mb-8 md:mb-20">
+    <section class="mb-8 md:mb-20 achievements-section">
       <div class="container">
         <div class="flex flex-col md:flex-row items-center bg-light-green px-4">
           <!-- Item 1 -->
           <div class="py-8 md:py-16 text-center w-[152px] flex-grow">
-            <p class="text-5xl dark-green">847 +</p>
+            <p class="text-5xl dark-green">
+              <span class="counter" data-target="847">0</span> +
+            </p>
             <div class="flex items-center gap-2 mt-4 justify-center">
               <span class="inline-block w-[40px] h-px bg-gray-500"></span>
               <span class="text-gray-500">Project Done</span>
@@ -536,7 +542,9 @@
           <div
             class="py-8 md:py-16 text-center achievements-item w-[152px] flex-grow"
           >
-            <p class="text-5xl dark-green">753 +</p>
+            <p class="text-5xl dark-green">
+              <span class="counter" data-target="753">0</span> +
+            </p>
             <div class="flex items-center gap-2 mt-4 justify-center">
               <span class="inline-block w-[40px] h-px bg-gray-500"></span>
               <span class="text-gray-500">Happy Client</span>
@@ -547,7 +555,9 @@
           <div
             class="py-8 md:py-16 text-center achievements-item w-[152px] flex-grow"
           >
-            <p class="text-5xl dark-green">284 +</p>
+            <p class="text-5xl dark-green">
+              <span class="counter" data-target="284 ">0</span> +
+            </p>
             <div class="flex items-center gap-2 mt-4 justify-center">
               <span class="inline-block w-[40px] h-px bg-gray-500"></span>
               <span class="text-gray-500">Team Member</span>
@@ -556,9 +566,11 @@
 
           <!-- Item 4  -->
           <div
-            class="py-8 md:py-18 text-center achievements-item w-[152px] flex-grow"
+            class="py-8 md:py-16 text-center achievements-item w-[152px] flex-grow"
           >
-            <p class="text-5xl dark-green">98 +</p>
+            <p class="text-5xl dark-green">
+              <span class="counter" data-target="98">0</span> +
+            </p>
             <div class="flex items-center gap-2 mt-4 justify-center">
               <span class="inline-block w-[40px] h-px bg-gray-500"></span>
               <span class="text-gray-500">Winning Award</span>
@@ -750,7 +762,7 @@
               class="swiper-slide relative bg-white py-14 px-14 max-w-full md:max-w-[540px]"
             >
               <blockquote
-                class="font-playfair dark-green text-[22px] relative z-10"
+                class="font-playfair dark-green text-[18px] md:text-[22px] relative z-10"
               >
                 “Lorem Ipsum is simply dummy text the printing and typesetting
                 industry. Lorem has been the industry's standard dummy text
@@ -761,9 +773,13 @@
                 class="flex justify-center md:justify-start items-center gap-2 pt-10"
               >
                 <span class="inline-block w-[40px] h-px bg-gray-500"></span>
-                <span class="text-lg text-gray-500">Designer of Musion</span>
+                <span class="tex-[18px] md:text-lg text-gray-500"
+                  >Designer of Musion</span
+                >
               </div>
-              <p class="font-playfair dark-green text-[26px] pt-3.5">
+              <p
+                class="text-center md:text-start font-playfair dark-green text-[18px] md:text-[26px] pt-3.5"
+              >
                 Jhon Doe
               </p>
               <svg
@@ -787,7 +803,7 @@
               class="swiper-slide relative bg-white py-14 px-14 max-w-full md:max-w-[540px]"
             >
               <blockquote
-                class="font-playfair dark-green text-[22px] relative z-10"
+                class="font-playfair dark-green text-[18px] md:text-[22px] relative z-10"
               >
                 “Lorem Ipsum is simply dummy text the printing and typesetting
                 industry. Lorem has been the industry's standard dummy text
@@ -798,9 +814,13 @@
                 class="flex justify-center md:justify-start items-center gap-2 pt-10"
               >
                 <span class="inline-block w-[40px] h-px bg-gray-500"></span>
-                <span class="text-lg text-gray-500">CEO of Musion</span>
+                <span class="tex-[18px] md:text-lg text-gray-500"
+                  >CEO of Musion</span
+                >
               </div>
-              <p class="font-playfair dark-green text-[26px] pt-3.5">
+              <p
+                class="text-center md:text-start font-playfair dark-green text-[18px] md:text-[26px] pt-3.5"
+              >
                 Rachel Patterson
               </p>
               <svg
@@ -824,7 +844,7 @@
               class="swiper-slide relative bg-white py-14 px-14 max-w-full md:max-w-[540px]"
             >
               <blockquote
-                class="font-playfair dark-green text-[22px] relative z-10"
+                class="font-playfair dark-green text-[18px] md:text-[22px] relative z-10"
               >
                 “Lorem Ipsum is simply dummy text the printing and typesetting
                 industry. Lorem has been the industry's standard dummy text
@@ -835,9 +855,13 @@
                 class="flex justify-center md:justify-start items-center gap-2 pt-10"
               >
                 <span class="inline-block w-[40px] h-px bg-gray-500"></span>
-                <span class="text-lg text-gray-500">Founder of Musion</span>
+                <span class="tex-[18px] md:text-lg text-gray-500"
+                  >Founder of Musion</span
+                >
               </div>
-              <p class="font-playfair dark-green text-[26px] pt-3.5">
+              <p
+                class="text-center md:text-start font-playfair dark-green text-[18px] md:text-[26px] pt-3.5"
+              >
                 Shoshana Horsley
               </p>
               <svg
@@ -861,7 +885,7 @@
               class="swiper-slide relative bg-white py-14 px-14 max-w-full md:max-w-[540px]"
             >
               <blockquote
-                class="font-playfair dark-green text-[22px] relative z-10"
+                class="font-playfair dark-green text-[18px] md:text-[22px] relative z-10"
               >
                 “Lorem Ipsum is simply dummy text the printing and typesetting
                 industry. Lorem has been the industry's standard dummy text
@@ -872,9 +896,13 @@
                 class="flex justify-center md:justify-start items-center gap-2 pt-10"
               >
                 <span class="inline-block w-[40px] h-px bg-gray-500"></span>
-                <span class="text-lg text-gray-500">Designer of Musion</span>
+                <span class="tex-[18px] md:text-lg text-gray-500"
+                  >Designer of Musion</span
+                >
               </div>
-              <p class="font-playfair dark-green text-[26px] pt-3.5">
+              <p
+                class="text-center md:text-start font-playfair dark-green text-[18px] md:text-[26px] pt-3.5"
+              >
                 Jhon Doe
               </p>
               <svg
@@ -898,7 +926,7 @@
               class="swiper-slide relative bg-white py-14 px-14 max-w-full md:max-w-[540px]"
             >
               <blockquote
-                class="font-playfair dark-green text-[22px] relative z-10"
+                class="font-playfair dark-green text-[18px] md:text-[22px] relative z-10"
               >
                 “Lorem Ipsum is simply dummy text the printing and typesetting
                 industry. Lorem has been the industry's standard dummy text
@@ -909,9 +937,13 @@
                 class="flex justify-center md:justify-start items-center gap-2 pt-10"
               >
                 <span class="inline-block w-[40px] h-px bg-gray-500"></span>
-                <span class="text-lg text-gray-500">CEO of Musion</span>
+                <span class="tex-[18px] md:text-lg text-gray-500"
+                  >CEO of Musion</span
+                >
               </div>
-              <p class="font-playfair dark-green text-[26px] pt-3.5">
+              <p
+                class="text-center md:text-start font-playfair dark-green text-[18px] md:text-[26px] pt-3.5"
+              >
                 Rachel Patterson
               </p>
               <svg
@@ -935,7 +967,7 @@
               class="swiper-slide relative bg-white py-14 px-14 max-w-full md:max-w-[540px]"
             >
               <blockquote
-                class="font-playfair dark-green text-[22px] relative z-10"
+                class="font-playfair dark-green text-[18px] md:text-[22px] relative z-10"
               >
                 “Lorem Ipsum is simply dummy text the printing and typesetting
                 industry. Lorem has been the industry's standard dummy text
@@ -946,9 +978,13 @@
                 class="flex justify-center md:justify-start items-center gap-2 pt-10"
               >
                 <span class="inline-block w-[40px] h-px bg-gray-500"></span>
-                <span class="text-lg text-gray-500">Founder of Musion</span>
+                <span class="tex-[18px] md:text-lg text-gray-500"
+                  >Founder of Musion</span
+                >
               </div>
-              <p class="font-playfair dark-green text-[26px] pt-3.5">
+              <p
+                class="text-center md:text-start font-playfair dark-green text-[18px] md:text-[26px] pt-3.5"
+              >
                 Shoshana Horsley
               </p>
               <svg
@@ -989,29 +1025,33 @@
         >
           <!-- Article 1 -->
           <article
-            class="w-full md:w-[calc(50%-15px)] bg-light-green overflow-hidden"
+            class="w-full md:w-[calc(50%-15px)] bg-light-green overflow-hidden group"
           >
-            <img
-              src="images/article-img-1.webp"
-              alt="Post image description"
-              class="w-full object-cover h-auto lazyload"
-              loading="lazy"
-            />
+            <div class="overflow-hidden">
+              <img
+                src="images/article-img-1.webp"
+                alt="Post image description"
+                class="w-full object-cover h-auto transform transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+
             <!-- Info -->
             <div
               class="flex items-center gap-5 px-4 pb-2 pt-7 text-sm text-gray-600"
             >
               <div>
                 <span class="dark-green">Date:</span>
-                <time datetime="2025-07-09" class="text-gray-500 text-[15px]"
-                  >March 23, 2022</time
-                >
+                <time datetime="2025-07-09" class="text-gray-500 text-[15px]">
+                  March 23, 2022
+                </time>
               </div>
               <div>
                 <span class="dark-green">By:</span>
                 <span class="author text-gray-500 text-[15px]">John Doe</span>
               </div>
             </div>
+
             <h2 class="px-4 text-2xl font-playfair dark-green mt-4">
               If You're Not Getting Your Garden Harvested Things!
             </h2>
@@ -1019,10 +1059,11 @@
               Lorem Ipsum is simply dummy text the printing and tpesetting
               industry. Lorem industry's standard dummy.
             </p>
+
             <div class="px-4 pb-4 my-5">
               <a
                 href="#"
-                class="inline-block bg-white dark-green px-12 py-2 transition-colors"
+                class="inline-block bg-white dark-green px-12 py-2 transition-colors transform transition-transform duration-300 hover:scale-105"
               >
                 Read More +
               </a>
@@ -1031,14 +1072,16 @@
 
           <!-- Article 2 -->
           <article
-            class="w-full md:w-[calc(50%-15px)] bg-light-green overflow-hidden"
+            class="w-full md:w-[calc(50%-15px)] bg-light-green overflow-hidden group"
           >
-            <img
-              src="images/article-img-2.webp"
-              alt="Post image description"
-              class="w-full object-cover h-auto lazyload"
-              loading="lazy"
-            />
+            <div class="overflow-hidden">
+              <img
+                src="images/article-img-2.webp"
+                alt="Post image description"
+                class="w-full object-cover h-auto transform transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
             <!-- Info -->
             <div
               class="flex items-center gap-5 px-4 pb-2 pt-7 text-sm text-gray-600"
@@ -1066,7 +1109,7 @@
             <div class="px-4 pb-4 my-5">
               <a
                 href="#"
-                class="inline-block bg-white dark-green px-12 py-2 transition-colors"
+                class="inline-block bg-white dark-green px-12 py-2 transition-colors transform transition-transform duration-300 hover:scale-105"
               >
                 Read More +
               </a>
@@ -1383,7 +1426,7 @@
     <!-- Scroll to Top Button -->
     <button
       id="scrollToTop"
-      class="fixed bottom-6 right-6 bg-dark-green text-white p-3 rounded-full shadow-lg hover:bg-medium-light-green hover:scale-110 transform transition-all duration-300 hidden focus:outline-none focus:ring-2 focus:ring-dark-green cursor-pointer"
+      class="fixed bottom-6 right-6 bg-dark-green text-white p-3 rounded-full shadow-lg hover:bg-medium-light-green hover:scale-110 transform transition-all duration-300 hidden focus:outline-none focus:ring-2 focus:ring-dark-green cursor-pointer z-10"
       aria-label="Прокрутити до початку сторінки"
       role="button"
     >
