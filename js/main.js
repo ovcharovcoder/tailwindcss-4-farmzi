@@ -92,8 +92,8 @@ function handleAutoplay() {
   }
 }
 
-handleAutoplay(); // called when loading
-window.addEventListener('resize', handleAutoplay); // called when resizing
+handleAutoplay();
+window.addEventListener('resize', handleAutoplay);
 
 // Swiper slider Testimonials
 const swiperForTestimonials = new Swiper('.mySwiper-testimonials', {
@@ -118,4 +118,140 @@ const swiperForTestimonials = new Swiper('.mySwiper-testimonials', {
       centeredSlides: true,
     },
   },
+});
+
+// Animations when appearing in the viewport to right
+document.addEventListener('DOMContentLoaded', function () {
+  const image = document.getElementById('aboutImage');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          image.classList.remove('opacity-0', '-translate-x-20');
+          image.classList.add('opacity-100', 'translate-x-0');
+          observer.unobserve(image);
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  observer.observe(image);
+});
+
+// Animations when appearing in the viewport to left
+document.addEventListener('DOMContentLoaded', () => {
+  const promoImage = document.getElementById('promoImage');
+
+  setTimeout(() => {
+    promoImage.classList.remove('opacity-0', 'translate-x-[100px]');
+    promoImage.classList.add('opacity-100', 'translate-x-0');
+  }, 100);
+});
+
+// Animations when appearing in vertical rotation
+document.addEventListener('DOMContentLoaded', function () {
+  const images = document.querySelectorAll('.scroll-fade');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      let delay = 0;
+
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.remove('opacity-0', 'rotate-x-90');
+            entry.target.classList.add('opacity-100', 'rotate-x-0');
+          }, delay);
+
+          delay += 200;
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  images.forEach(image => observer.observe(image));
+});
+
+// Animations when appearing in horizontal rotation
+document.addEventListener('DOMContentLoaded', () => {
+  const section = document.querySelector('.team-section');
+  const images = section.querySelectorAll('.team-image');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          images.forEach((img, index) => {
+            setTimeout(() => {
+              img.classList.remove(
+                'opacity-0',
+                '[transform:rotateY(90deg)]',
+                'translate-x-20'
+              );
+              img.classList.add('opacity-100', 'translate-x-0');
+              img.style.transform = 'rotateY(0deg)';
+            }, 300 * index);
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  observer.observe(section);
+});
+
+// Counter animation
+function animateCount(el, target, duration = 1500) {
+  let start = 0;
+  let startTime = null;
+
+  function update(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progress = timestamp - startTime;
+    const progressRatio = Math.min(progress / duration, 1);
+    const current = Math.floor(progressRatio * target);
+    el.textContent = current;
+
+    if (progress < duration) {
+      requestAnimationFrame(update);
+    } else {
+      el.textContent = target;
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const section = document.querySelector('.achievements-section');
+  const counters = section.querySelectorAll('.counter');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            animateCount(counter, target, 1500);
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  observer.observe(section);
 });
