@@ -26,5 +26,5 @@ Farmzi — це сучасний вебсайт-вітрина, розробле
 <img src="Screenshot_1.png" alt="img">
 
 <a href="https://ovcharovcoder.github.io/tailwindcss-4-farmzi/" target="_blank" rel="noopener noreferrer">
-  Переглянути сайт у браузері
+  Переглянути сайт
 </a>
