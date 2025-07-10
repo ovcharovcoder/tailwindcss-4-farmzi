@@ -23,6 +23,8 @@ Farmzi — це сучасний вебсайт-вітрина, розробле
 – поява зображень з ефектом обертання при скролі;<br>
 – активація лічильників при досягненні відповідної секції.
 
+<img href="Screenshot_1.png" alt="img">
+
 <a href="https://ovcharovcoder.github.io/tailwindcss-4-farmzi/" target="_blank" rel="noopener noreferrer">
   Переглянути сайт у браузері
 </a>
