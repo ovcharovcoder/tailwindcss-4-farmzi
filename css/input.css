@@ -1,47 +1,13 @@
 @import 'tailwindcss';
 
-.darker-green {
-  color: #0a312c;
-}
-.bg-darker-green {
-  background-color: #0a312c;
-}
-
-.dark-green {
-  color: #177165;
-}
-.bg-dark-green {
-  background-color: #177165;
-}
-.green {
-  color: #23786d;
-}
-.bg-green {
-  background-color: #23786d;
-}
-
-.medium-light-green {
-  color: #a4d6cf;
-}
-.bg-medium-light-green {
-  background-color: #a4d6cf;
-}
-
-.light-green {
-  color: #e1f4f2;
-}
-.bg-light-green {
-  background-color: #e1f4f2;
-}
-
-.font-roboto {
-  font-family: 'Roboto', sans-serif;
-  font-optical-sizing: auto;
-}
-
-.font-playfair {
-  font-family: 'Playfair Display', serif;
-  font-optical-sizing: auto;
+@layer base {
+  :root {
+    --color-green-100: #e1f4f2;
+    --color-green-300: #a4d6cf;
+    --color-green-500: #23786d;
+    --color-green-600: #177165;
+    --color-green-900: #0a312c;
+  }
 }
 
 .container-wide {
@@ -104,24 +70,36 @@
   }
 }
 
-.rotate-x-90 {
-  transform: rotateX(90deg);
-}
-.rotate-x-0 {
-  transform: rotateX(0deg);
-}
-.opacity-0 {
-  opacity: 0;
-}
-.opacity-100 {
-  opacity: 1;
-}
+@layer utilities {
+  .font-roboto {
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+  }
 
-.rotate-y-90 {
-  transform: rotateY(90deg);
-}
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+    font-optical-sizing: auto;
+  }
 
-.team-image {
-  will-change: transform, opacity;
-  backface-visibility: hidden;
+  .rotate-x-90 {
+    transform: rotateX(90deg);
+  }
+  .rotate-x-0 {
+    transform: rotateX(0deg);
+  }
+  .opacity-0 {
+    opacity: 0;
+  }
+  .opacity-100 {
+    opacity: 1;
+  }
+
+  .rotate-y-90 {
+    transform: rotateY(90deg);
+  }
+
+  .team-image {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+  }
 }
